@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title data-id="th-modified">Lisa Roman Foss | Data Analyst & BI Specialist</title>
+<meta name="description" content="Lisa Roman Foss – Data Analyst & BI Specialist. Expert in Power BI, Tableau, SQL, Python. Turning complex data into clear insights that drive business decisions." data-id="th-modified">
+<meta property="og:title" content="Lisa Roman Foss | Data Analyst & BI Specialist" data-id="th-modified">
+<meta property="og:description" content="Lisa Roman Foss – Data Analyst & BI Specialist. Expert in Power BI, Tableau, SQL, Python. Turning complex data into clear insights that drive business decisions." data-id="th-modified">
+<meta property="og:type" content="website" data-id="th-modified">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ── */
+:root {
+  --navy: #0B1F3A;
+  --navy-mid: #132d52;
+  --navy-light: #1a3a6b;
+  --teal: #00C9B8;
+  --teal-dim: rgba(0,201,184,0.15);
+  --teal-glow: rgba(0,201,184,0.4);
+  --coral: #FF6B6B;
+  --coral-dim: rgba(255,107,107,0.15);
+  --off-white: #F0F4F8;
+  --text-muted: #8fafc8;
+  --card-bg: rgba(19,45,82,0.6);
+  --border: rgba(0,201,184,0.2);
+  --glass: rgba(11,31,58,0.85);
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+  --radius: 12px;
+  --radius-lg: 20px;
+}
+[data-theme="light"] {
+  --navy: #f0f4f8;
+  --navy-mid: #dde8f5;
+  --navy-light: #c8dcf0;
+  --teal: #007a70;
+  --teal-dim: rgba(0,122,112,0.1);
+  --teal-glow: rgba(0,122,112,0.3);
+  --coral: #d64545;
+  --coral-dim: rgba(214,69,69,0.1);
+  --off-white: #0B1F3A;
+  --text-muted: #4a6580;
+  --card-bg: rgba(220,232,245,0.7);
+  --border: rgba(0,122,112,0.2);
+  --glass: rgba(240,244,248,0.9);
+}
+
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);background:var(--navy);color:var(--off-white);line-height:1.6;overflow-x:hidden;transition:background var(--transition),color var(--transition)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+ul{list-style:none}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--navy)}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all var(--transition)}
+.nav-logo{font-family:var(--font-display);font-weight:700;font-size:1.2rem;color:var(--teal);letter-spacing:-0.02em}
+.nav-logo span{color:var(--off-white)}
+.nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{font-size:0.875rem;font-weight:500;color:var(--text-muted);transition:color var(--transition);letter-spacing:0.01em}
+.nav-links a:hover{color:var(--teal)}
+.nav-right{display:flex;gap:0.75rem;align-items:center}
+.theme-toggle{width:40px;height:40px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-muted);transition:all var(--transition);font-size:1.1rem}
+.theme-toggle:hover{border-color:var(--teal);color:var(--teal)}
+.nav-cta{padding:0.5rem 1.25rem;background:var(--teal);color:var(--navy);font-weight:600;font-size:0.8rem;border-radius:50px;font-family:var(--font-display);letter-spacing:0.02em;transition:all var(--transition)}
+.nav-cta:hover{background:var(--off-white);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;width:32px;padding:4px}
+.hamburger span{display:block;height:2px;background:var(--off-white);border-radius:2px;transition:all var(--transition)}
+
+/* ── HERO ── */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:80px}
+#particle-canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:4rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-eyebrow{font-family:var(--font-mono);font-size:0.8rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1rem;opacity:0;animation:fadeUp 0.6s 0.2s forwards}
+.hero-name{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);font-weight:700;line-height:1.05;letter-spacing:-0.03em;margin-bottom:0.5rem;opacity:0;animation:fadeUp 0.6s 0.35s forwards}
+.hero-name .accent{color:var(--teal)}
+.hero-title{font-family:var(--font-display);font-size:clamp(1rem,2vw,1.3rem);font-weight:400;color:var(--text-muted);margin-bottom:1.5rem;min-height:2em;opacity:0;animation:fadeUp 0.6s 0.5s forwards}
+.typed-cursor{display:inline-block;width:2px;height:1em;background:var(--teal);margin-left:2px;animation:blink 1s infinite;vertical-align:middle}
+.hero-summary{font-size:1rem;line-height:1.75;color:var(--text-muted);max-width:480px;margin-bottom:2rem;opacity:0;animation:fadeUp 0.6s 0.65s forwards}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:0.75rem;opacity:0;animation:fadeUp 0.6s 0.8s forwards}
+.btn-primary{padding:0.875rem 2rem;background:var(--teal);color:var(--navy);font-weight:700;font-family:var(--font-display);font-size:0.9rem;border-radius:50px;transition:all var(--transition);letter-spacing:0.02em}
+.btn-primary:hover{background:var(--off-white);transform:translateY(-2px);box-shadow:0 8px 30px var(--teal-glow)}
+.btn-outline{padding:0.875rem 2rem;border:1.5px solid var(--border);color:var(--off-white);font-weight:600;font-family:var(--font-display);font-size:0.9rem;border-radius:50px;transition:all var(--transition)}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px)}
+.btn-icon{width:48px;height:48px;border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:1.1rem;transition:all var(--transition)}
+.btn-icon:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px)}
+.hero-visual{display:flex;flex-direction:column;align-items:center;gap:1.5rem;opacity:0;animation:fadeUp 0.6s 0.5s forwards}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%}
+.stat-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;backdrop-filter:blur(10px);transition:all var(--transition)}
+.stat-card:hover{border-color:var(--teal);transform:translateY(-3px)}
+.stat-number{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--teal);line-height:1}
+.stat-label{font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem;font-weight:500}
+.hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center}
+.badge{padding:0.4rem 0.9rem;background:var(--teal-dim);border:1px solid var(--teal);border-radius:50px;font-size:0.75rem;font-weight:600;color:var(--teal);font-family:var(--font-mono);letter-spacing:0.05em}
+
+/* ── SECTIONS ── */
+section{padding:6rem 2rem;max-width:1200px;margin:0 auto}
+.section-full{max-width:100%;padding:6rem 0}
+.section-full-inner{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section-label{font-family:var(--font-mono);font-size:0.75rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.75rem}
+.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:700;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+.section-subtitle{color:var(--text-muted);max-width:540px;line-height:1.7;font-size:0.95rem}
+.section-header{margin-bottom:3.5rem}
+.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
+.about-text p{color:var(--text-muted);line-height:1.8;margin-bottom:1.25rem;font-size:0.95rem}
+.about-highlights{display:grid;gap:1rem;margin-top:2rem}
+.highlight-item{display:flex;gap:1rem;padding:1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);transition:all var(--transition)}
+.highlight-item:hover{border-color:var(--teal);transform:translateX(4px)}
+.highlight-icon{width:36px;height:36px;border-radius:8px;background:var(--teal-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.highlight-content h4{font-family:var(--font-display);font-size:0.875rem;font-weight:600;margin-bottom:0.2rem}
+.highlight-content p{font-size:0.8rem;color:var(--text-muted);line-height:1.5}
+.about-mission{margin-top:2rem;padding:1.5rem;background:linear-gradient(135deg,var(--teal-dim),var(--coral-dim));border:1px solid var(--border);border-radius:var(--radius-lg);position:relative;overflow:hidden}
+.about-mission::before{content:'"';font-family:var(--font-display);font-size:6rem;color:var(--teal);opacity:0.2;position:absolute;top:-1rem;left:1rem;line-height:1}
+.about-mission p{font-family:var(--font-display);font-size:1.05rem;font-weight:500;line-height:1.6;position:relative;z-index:1}
+
+/* ── SKILLS ── */
+.skills-bg{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 50%,var(--navy) 100%);padding:6rem 0}
+.skills-filter{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.5rem}
+.filter-btn{padding:0.5rem 1.25rem;border:1px solid var(--border);border-radius:50px;font-size:0.8rem;font-weight:500;color:var(--text-muted);transition:all var(--transition);font-family:var(--font-display)}
+.filter-btn.active,.filter-btn:hover{background:var(--teal);border-color:var(--teal);color:var(--navy)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
+.skill-category{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;backdrop-filter:blur(10px);transition:all var(--transition)}
+.skill-category:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.2)}
+.skill-cat-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem}
+.skill-cat-icon{width:40px;height:40px;border-radius:10px;background:var(--teal-dim);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.skill-cat-name{font-family:var(--font-display);font-weight:600;font-size:0.95rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
+.skill-tag{padding:0.3rem 0.75rem;background:rgba(0,201,184,0.08);border:1px solid var(--border);border-radius:50px;font-size:0.75rem;color:var(--text-muted);font-family:var(--font-mono);transition:all var(--transition)}
+.skill-tag:hover{background:var(--teal-dim);border-color:var(--teal);color:var(--teal)}
+
+/* ── EXPERIENCE ── */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--teal),var(--border),transparent)}
+.timeline-item{position:relative;margin-bottom:3rem;padding-left:2rem}
+.timeline-dot{position:absolute;left:-2.5rem;top:0.5rem;width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px var(--navy),0 0 0 6px var(--teal-dim)}
+.timeline-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;backdrop-filter:blur(10px);transition:all var(--transition);cursor:pointer}
+.timeline-card:hover{border-color:var(--teal);box-shadow:0 10px 40px rgba(0,0,0,0.2)}
+.timeline-meta{display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;margin-bottom:0.75rem}
+.timeline-company{font-family:var(--font-display);font-weight:700;font-size:1.1rem}
+.timeline-date{font-family:var(--font-mono);font-size:0.75rem;color:var(--teal);padding:0.25rem 0.75rem;background:var(--teal-dim);border-radius:50px}
+.timeline-role{font-family:var(--font-display);font-size:0.95rem;font-weight:500;color:var(--text-muted);margin-bottom:0.5rem}
+.timeline-type{font-size:0.75rem;color:var(--text-muted);font-family:var(--font-mono)}
+.timeline-bullets{margin-top:1rem;display:none}
+.timeline-bullets.open{display:block}
+.timeline-bullets li{display:flex;gap:0.75rem;margin-bottom:0.65rem;font-size:0.875rem;color:var(--text-muted);line-height:1.5}
+.timeline-bullets li::before{content:'▸';color:var(--teal);flex-shrink:0;margin-top:2px}
+.timeline-bullets li strong{color:var(--off-white)}
+.expand-toggle{display:flex;align-items:center;gap:0.5rem;margin-top:0.75rem;font-size:0.8rem;color:var(--teal);font-weight:600;font-family:var(--font-display)}
+.expand-toggle svg{transition:transform var(--transition)}
+.expand-toggle.open svg{transform:rotate(180deg)}
+
+/* ── PROJECTS ── */
+.projects-filter{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.5rem}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
+.project-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition);display:flex;flex-direction:column}
+.project-card:hover{border-color:var(--teal);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.3)}
+.project-card.featured{border-color:var(--teal);background:linear-gradient(135deg,var(--card-bg),rgba(0,201,184,0.05))}
+.project-header{padding:1.5rem 1.5rem 0}
+.project-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem}
+.project-tag{padding:0.2rem 0.6rem;border-radius:4px;font-size:0.7rem;font-weight:600;font-family:var(--font-mono);background:var(--teal-dim);color:var(--teal);border:1px solid var(--border)}
+.project-tag.coral{background:var(--coral-dim);color:var(--coral);border-color:rgba(255,107,107,0.3)}
+.featured-badge{padding:0.2rem 0.6rem;border-radius:4px;font-size:0.65rem;font-weight:700;font-family:var(--font-mono);background:var(--teal);color:var(--navy);margin-left:auto}
+.project-title{font-family:var(--font-display);font-size:1.05rem;font-weight:700;margin-bottom:0.75rem;line-height:1.3}
+.project-desc{font-size:0.875rem;color:var(--text-muted);line-height:1.7;padding:0 1.5rem 1rem}
+.project-footer{margin-top:auto;padding:1rem 1.5rem;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:0.75rem}
+.project-link{display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:600;color:var(--teal);font-family:var(--font-display);transition:all var(--transition)}
+.project-link:hover{color:var(--off-white)}
+.project-link.outline{color:var(--text-muted)}
+.project-link.outline:hover{color:var(--teal)}
+
+/* ── CERTIFICATIONS ── */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
+.cert-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;display:flex;gap:1rem;align-items:flex-start;transition:all var(--transition)}
+.cert-card:hover{border-color:var(--teal);transform:translateY(-3px)}
+.cert-icon{width:40px;height:40px;border-radius:8px;background:var(--teal-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
+.cert-info h4{font-family:var(--font-display);font-size:0.875rem;font-weight:600;margin-bottom:0.2rem;line-height:1.3}
+.cert-info p{font-size:0.75rem;color:var(--text-muted)}
+.cert-info .cert-date{font-family:var(--font-mono);font-size:0.7rem;color:var(--teal);margin-top:0.3rem}
+
+/* ── EDUCATION ── */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.edu-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:all var(--transition)}
+.edu-card:hover{border-color:var(--teal)}
+.edu-card.featured{border-color:var(--teal);background:linear-gradient(135deg,var(--card-bg),var(--teal-dim))}
+.edu-degree{font-family:var(--font-display);font-size:0.75rem;color:var(--teal);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem}
+.edu-school{font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:0.25rem}
+.edu-period{font-size:0.8rem;color:var(--text-muted);font-family:var(--font-mono);margin-bottom:1rem}
+.edu-detail{font-size:0.875rem;color:var(--text-muted);line-height:1.6;margin-bottom:0.75rem}
+.edu-courses{display:flex;flex-wrap:wrap;gap:0.4rem}
+.edu-course{padding:0.25rem 0.6rem;background:var(--teal-dim);border:1px solid var(--border);border-radius:4px;font-size:0.7rem;color:var(--text-muted);font-family:var(--font-mono)}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start}
+.contact-info h3{font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:1rem}
+.contact-info p{color:var(--text-muted);line-height:1.7;margin-bottom:2rem;font-size:0.95rem}
+.contact-links{display:flex;flex-direction:column;gap:1rem}
+.contact-link-item{display:flex;align-items:center;gap:1rem;padding:1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);transition:all var(--transition)}
+.contact-link-item:hover{border-color:var(--teal);transform:translateX(4px)}
+.contact-link-icon{width:36px;height:36px;border-radius:8px;background:var(--teal-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;color:var(--teal)}
+.contact-link-text{font-size:0.875rem;font-weight:500}
+.contact-link-sub{font-size:0.75rem;color:var(--text-muted)}
+.contact-form{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem}
+.form-group{margin-bottom:1.25rem}
+.form-label{display:block;font-size:0.8rem;font-weight:600;margin-bottom:0.5rem;font-family:var(--font-display);color:var(--text-muted)}
+.form-input{width:100%;padding:0.875rem 1rem;background:var(--navy);border:1px solid var(--border);border-radius:var(--radius);color:var(--off-white);font-family:var(--font-body);font-size:0.9rem;transition:all var(--transition);outline:none}
+.form-input:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-dim)}
+.form-input::placeholder{color:var(--text-muted)}
+textarea.form-input{resize:vertical;min-height:120px}
+.form-submit{width:100%;padding:1rem;background:var(--teal);color:var(--navy);font-weight:700;font-family:var(--font-display);font-size:0.95rem;border-radius:var(--radius);transition:all var(--transition);letter-spacing:0.02em}
+.form-submit:hover{background:var(--off-white);transform:translateY(-2px)}
+.form-msg{display:none;text-align:center;margin-top:1rem;font-size:0.875rem;color:var(--teal);font-weight:500}
+
+/* ── FOOTER ── */
+footer{text-align:center;padding:2.5rem 2rem;border-top:1px solid var(--border)}
+footer p{font-size:0.8rem;color:var(--text-muted)}
+footer span{color:var(--teal)}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-delay-4{transition-delay:0.4s}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+
+/* ── PUBLICATION ── */
+.pub-card{background:linear-gradient(135deg,var(--card-bg),var(--teal-dim));border:1px solid var(--teal);border-radius:var(--radius-lg);padding:2rem;margin-top:2rem}
+.pub-card .pub-label{font-family:var(--font-mono);font-size:0.7rem;color:var(--teal);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem}
+.pub-card h3{font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:0.5rem}
+.pub-card p{font-size:0.875rem;color:var(--text-muted);line-height:1.6}
+.pub-card .pub-journal{font-family:var(--font-mono);font-size:0.75rem;color:var(--teal);margin-top:0.75rem}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-content,.about-grid,.contact-grid,.edu-grid{grid-template-columns:1fr;gap:2.5rem}
+  .hero-visual{display:none}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .projects-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  section{padding:4rem 1.25rem}
+  .hero-content{padding:3rem 1.25rem}
+  .btn-primary,.btn-outline{padding:0.75rem 1.5rem;font-size:0.85rem}
+  .skills-grid,.certs-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
+}
+
+/* ── MOBILE MENU ── */
+.mobile-menu{display:none;flex-direction:column;gap:0;position:fixed;top:70px;left:0;right:0;background:var(--glass);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:99;padding:1rem 2rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:0.75rem 0;border-bottom:1px solid var(--border);font-size:0.9rem;color:var(--text-muted);font-weight:500}
+.mobile-menu a:last-child{border-bottom:none}
+</style>
+<meta property="og:image" content="https://tiiny.host/assets/logo-purple-bg.png" data-id="th-modified" ><meta property="og:image:width" content="1501" data-id="th-modified" ><meta property="og:image:height" content="1501" data-id="th-modified" ><meta property="og:image:type" content="image/png" data-id="th-modified" ><meta property="og:url" content="https://lisa-foss-data-portfolio.tiiny.site/" data-id="th-modified" ><script defer data-domain="lisa-foss-data-portfolio.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script><script type="text/javascript" src="https://tiiny.host/ad-script.js"></script></head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Lisa<span>Foss</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle theme">☀️</button>
+    <a href="https://www.linkedin.com/in/fosslisa/" target="_blank" class="nav-cta">Hire Me</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#certifications" onclick="toggleMenu()">Certifications</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="particle-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Data Analyst & BI Specialist</div>
+      <h1 class="hero-name">Lisa Roman<br><span class="accent">Foss</span></h1>
+      <div class="hero-title">
+        <span id="typed-text"></span><span class="typed-cursor"></span>
+      </div>
+      <p class="hero-summary">I turn messy, complex data into clear insights that help teams make smarter decisions. Specializing in Power BI, Tableau, SQL, and Python — with a passion for data storytelling that connects numbers to real business impact.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Contact Me</a>
+        <a href="#experience" class="btn-outline">View Experience</a>
+        <a href="https://www.linkedin.com/in/fosslisa/" target="_blank" class="btn-icon" title="LinkedIn">in</a>
+        <a href="https://github.com/Lisafoss22" target="_blank" class="btn-icon" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"></path></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">12+</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3.88</div>
+          <div class="stat-label">GPA at Clark University</div>
+        </div>
+      </div>
+      <div class="hero-badges">
+        <span class="badge">Power BI</span>
+        <span class="badge">Tableau</span>
+        <span class="badge">SQL</span>
+        <span class="badge">Python</span>
+        <span class="badge">Machine Learning</span>
+        <span class="badge">DAX</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header reveal">
+    <div class="section-label">Who I Am</div>
+    <h2 class="section-title">Analyst. Storyteller.<br>Problem Solver.</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>I'm a graduate student earning my M.S. in Data Analytics at Clark University (GPA 3.85) and a Data Analytics professional with roots in both business and engineering. My journey spans SaaS, Healthcare, HR, Hospitality, and Consumer Analytics — and one common thread runs through all of it: making data usable for the people who need it most.</p>
+      <p>At Vosyn, I built Power BI dashboards and predictive pricing models. At Vistaar Digital, I automated reporting pipelines that saved 13+ hours per cycle. I'm also a co-author on a published research paper about AI-enabled learning systems (SMARTSETGO).</p>
+      <p>What sets me apart isn't just technical fluency — it's the ability to sit across from a business stakeholder, understand their real question, and come back with a clear, compelling answer built from data.</p>
+      <div class="about-mission">
+        <p>My mission is to advocate for scalable, data-driven solutions that don't just report the past — they illuminate the path forward.</p>
+      </div>
+    </div>
+    <div class="about-highlights reveal reveal-delay-2">
+      <div class="highlight-item">
+        <div class="highlight-icon">📊</div>
+        <div class="highlight-content">
+          <h4>Business Intelligence</h4>
+          <p>Executive-level KPI dashboards in Power BI and Tableau that translate complex operations into actionable insights</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">🤖</div>
+        <div class="highlight-content">
+          <h4>Predictive Analytics & ML</h4>
+          <p>Regression, clustering, and classification models applied to pricing strategy, attrition, and healthcare operations</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">⚡</div>
+        <div class="highlight-content">
+          <h4>Reporting Efficiency</h4>
+          <p>Reduced report generation from 15 hours to 2 hours by automating ETL pipelines with Python and Power BI</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">🎯</div>
+        <div class="highlight-content">
+          <h4>Stakeholder Communication</h4>
+          <p>Translating ambiguous business questions into structured BI specifications that decision-makers can act on</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">📝</div>
+        <div class="highlight-content">
+          <h4>Published Researcher</h4>
+          <p>Co-author on SMARTSETGO — an AI-enabled Learning Management System published in IJISRT</p>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-icon">🏆</div>
+        <div class="highlight-content">
+          <h4>IEEE Chair, Clark University</h4>
+          <p>Leading strategic direction, events, and partnerships for a 20+ member technical student organization</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<div class="skills-bg" id="skills">
+  <div class="section-full-inner">
+    <div class="section-header reveal">
+      <div class="section-label">Technical Expertise</div>
+      <h2 class="section-title">Skills & Technologies</h2>
+      <p class="section-subtitle">A full-stack data skill set spanning analytics, visualization, machine learning, and business analysis.</p>
+    </div>
+    <div class="skills-grid" id="skillsGrid">
+
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🐍</div>
+          <div class="skill-cat-name">Programming & Analytics</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">R</span>
+          <span class="skill-tag">Jupyter</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🗄️</div>
+          <div class="skill-cat-name">Databases & SQL</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL (T-SQL)</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Microsoft SQL Server</span>
+          <span class="skill-tag">ETL Pipelines</span>
+          <span class="skill-tag">Data Modeling</span>
+          <span class="skill-tag">Azure Data Factory</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal reveal-delay-2">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">📈</div>
+          <div class="skill-cat-name">Business Intelligence & Viz</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">DAX</span>
+          <span class="skill-tag">Power Query</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">Tableau Prep</span>
+          <span class="skill-tag">QlikView</span>
+          <span class="skill-tag">Looker</span>
+          <span class="skill-tag">Google Data Studio</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🤖</div>
+          <div class="skill-cat-name">Machine Learning & Stats</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Regression</span>
+          <span class="skill-tag">Clustering (K-Means)</span>
+          <span class="skill-tag">Classification</span>
+          <span class="skill-tag">EDA</span>
+          <span class="skill-tag">A/B Testing</span>
+          <span class="skill-tag">Customer Segmentation</span>
+          <span class="skill-tag">Feature Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">💼</div>
+          <div class="skill-cat-name">Business Analysis</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Requirements Gathering</span>
+          <span class="skill-tag">Stakeholder Workshops</span>
+          <span class="skill-tag">KPI Reporting</span>
+          <span class="skill-tag">Process Flows</span>
+          <span class="skill-tag">User Stories</span>
+          <span class="skill-tag">Source-to-Target Mapping</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal reveal-delay-2">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">🛠️</div>
+          <div class="skill-cat-name">Tools & Platforms</div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Excel (Advanced)</span>
+          <span class="skill-tag">Salesforce CRM</span>
+          <span class="skill-tag">HubSpot</span>
+          <span class="skill-tag">Google Analytics</span>
+          <span class="skill-tag">Power Automate</span>
+          <span class="skill-tag">Git / GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header reveal">
+    <div class="section-label">Career Journey</div>
+    <h2 class="section-title">Experience</h2>
+    <p class="section-subtitle">A track record of delivering data-driven insights across industries, from SaaS pricing analytics to digital marketing intelligence.</p>
+  </div>
+  <div class="timeline">
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card" onclick="toggleTimeline(this)">
+        <div class="timeline-meta">
+          <span class="timeline-company">eMarketing Association</span>
+          <span class="timeline-date">Jun 2026 – Present</span>
+        </div>
+        <div class="timeline-role">Data Analytics & Research Volunteer</div>
+        <div class="timeline-type">Part-time · Hybrid · New York, NY</div>
+        <div class="expand-toggle">
+          Show details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <ul class="timeline-bullets">
+          <li>Conducted data research and outreach analysis to identify marketing and partnership opportunities across targeted professional networks.</li>
+          <li>Cleaned and organized multi-source datasets into structured formats, <strong>improving accuracy and downstream reporting usability</strong>.</li>
+          <li>Supported campaign tracking by maintaining structured datasets and monitoring outreach performance metrics.</li>
+          <li>Applied analytical thinking to interpret patterns in outreach data and support strategic marketing decisions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card" onclick="toggleTimeline(this)">
+        <div class="timeline-meta">
+          <span class="timeline-company">Vosyn, Inc.</span>
+          <span class="timeline-date">Jul 2025 – Dec 2025</span>
+        </div>
+        <div class="timeline-role">Data Analytics Intern – Operations</div>
+        <div class="timeline-type">Internship · Remote · United States</div>
+        <div class="expand-toggle">
+          Show details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <ul class="timeline-bullets">
+          <li>Led requirements-gathering sessions with operations, pricing, and strategy stakeholders to translate ambiguous business needs into structured BI specifications across <strong>1,000+ validated records</strong>.</li>
+          <li>Increased revenue visibility and forecasting accuracy by <strong>8% and 12% respectively</strong> by building ETL pipelines, source-to-target mappings, and predictive models using SQL, Python, and Excel.</li>
+          <li>Built and maintained interactive <strong>Power BI dashboards</strong> (DAX, Power Query) enabling real-time KPI tracking across multiple projects.</li>
+          <li>Delivered executive-ready reports and visualizations supporting faster, more confident decision-making.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card" onclick="toggleTimeline(this)">
+        <div class="timeline-meta">
+          <span class="timeline-company">InternPe</span>
+          <span class="timeline-date">Aug 2024 – Sep 2024</span>
+        </div>
+        <div class="timeline-role">AI & Machine Learning Intern</div>
+        <div class="timeline-type">Internship · Remote · India</div>
+        <div class="expand-toggle">
+          Show details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <ul class="timeline-bullets">
+          <li>Developed and validated predictive ML pipelines on <strong>5,000+ data points</strong>, conducting data profiling and quality checks that reduced model latency by 15% and processing time by 30%.</li>
+          <li>Improved analytics adoption by <strong>25%</strong> by communicating ML results through KPI dashboards, visualizations, and stakeholder reports.</li>
+          <li>Performed EDA to uncover trends, correlations, and feature importance using Pandas, NumPy, and Scikit-learn.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card" onclick="toggleTimeline(this)">
+        <div class="timeline-meta">
+          <span class="timeline-company">Vistaar Digital Communications</span>
+          <span class="timeline-date">Jun 2022 – Nov 2023</span>
+        </div>
+        <div class="timeline-role">Jr. Client Servicing Executive – BI Analytics</div>
+        <div class="timeline-type">Full-time · On-site · Borivali, Maharashtra</div>
+        <div class="expand-toggle">
+          Show details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <ul class="timeline-bullets">
+          <li>Automated Power BI and Python reporting workflows, <strong>reducing report generation time from 15 hours to 2 hours</strong> while ensuring consistent documentation and UAT validation.</li>
+          <li>Leveraged HubSpot CRM data to monitor customer lifecycle signals and support targeted interventions that <strong>increased retention by 5%</strong>.</li>
+          <li>Performed customer engagement analysis using SQL and Google Analytics to identify behavioral trends supporting campaign optimization.</li>
+          <li>Acted as functional liaison between clients and internal teams across <strong>2,000+ records</strong>, documenting business rules to align reporting with client objectives.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card" onclick="toggleTimeline(this)">
+        <div class="timeline-meta">
+          <span class="timeline-company">The Sparks Foundation</span>
+          <span class="timeline-date">Jul 2021 – Sep 2021</span>
+        </div>
+        <div class="timeline-role">Data Science & Business Analytics Intern</div>
+        <div class="timeline-type">Internship · Remote · Mumbai</div>
+        <div class="expand-toggle">
+          Show details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <ul class="timeline-bullets">
+          <li>Built supervised ML models on 800+ records achieving <strong>85% accuracy</strong>; conducted SQL-based EDA and data profiling to surface actionable trends.</li>
+          <li>Delivered findings to non-technical stakeholders through clear, structured documentation and visualizations.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header reveal">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">Real-world analytics across healthcare, HR, climate, hospitality, and retail — each project built to drive decisions, not just describe data.</p>
+  </div>
+  <div class="projects-filter reveal">
+    <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+    <button class="filter-btn" onclick="filterProjects('powerbi',this)">Power BI</button>
+    <button class="filter-btn" onclick="filterProjects('tableau',this)">Tableau</button>
+    <button class="filter-btn" onclick="filterProjects('python',this)">Python</button>
+    <button class="filter-btn" onclick="filterProjects('ml',this)">Machine Learning</button>
+    <button class="filter-btn" onclick="filterProjects('sql',this)">SQL</button>
+  </div>
+  <div class="projects-grid" id="projectsGrid">
+
+    <div class="project-card featured reveal" data-tags="tableau sql python">
+      <div class="project-header">
+        <div class="project-tags">
+          <span class="project-tag">Tableau</span>
+          <span class="project-tag">SQL</span>
+          <span class="project-tag">Python</span>
+          <span class="featured-badge">⭐ Featured</span>
+        </div>
+        <div class="project-title">NYC Airbnb Market Insights</div>
+      </div>
+      <p class="project-desc">Visualized 48,000+ listings using Python and Tableau to uncover trends in pricing, reviews, and availability across NYC boroughs. Delivered actionable host strategy recommendations to optimize revenue and occupancy.</p>
+      <div class="project-footer">
+        <a href="https://github.com/Lisafoss22/-Data-Meets-Hospitality-NYC-Airbnb-Market-Insights-" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1" data-tags="powerbi sql">
+      <div class="project-header">
+        <div class="project-tags">
+          <span class="project-tag">Power BI</span>
+          <span class="project-tag">SQL</span>
+          <span class="project-tag">Excel</span>
+          <span class="featured-badge">⭐ Featured</span>
+        </div>
+        <div class="project-title">Healthcare BI: Synthetic Clinical Records</div>
+      </div>
+      <p class="project-desc">Built a Business Intelligence solution for UnitedHealthcare using synthetic Kaggle data. Analyzed patient outcomes, billing efficiency, and resource optimization using SQL Server, Excel, and Power BI to model real operational insights.</p>
+      <div class="project-footer">
+        <a href="https://github.com/Lisafoss22/Transforming-Healthcare-Operations-Through-Business-Intelligence-Synthetic-Clinical-Records" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2" data-tags="tableau">
+      <div class="project-header">
+        <div class="project-tags">
+          <span class="project-tag">Tableau</span>
+          <span class="project-tag">Excel</span>
+        </div>
+        <div class="project-title">AdventureWorks: Education, Occupation & Country-wise Trends</div>
+      </div>
+      <p class="project-desc">Created advanced Tableau dashboards featuring bump charts, donut charts, bullet charts, and what-if sliders to reveal how education level, occupation, and country affect sales performance. USA and Australia dominated global profit shares.</p>
+      <div class="project-footer">
+        <a href="https://github.com/Lisafoss22/-AdventureWorks-Data-Insights-Education-Occupation-Country-wise-Trends" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-tags="tableau sql">
+      <div class="project-header">
+        <div class="project-tags">
+          <span class="project-tag">Tableau</span>
+          <span class="project-tag">Excel</span>
+          <span class="project-tag">SQL</span>
+        </div>
+        <div class="project-title">HR Analytics: Optimizing Retention</div>
+      </div>
+      <p class="project-desc">Analyzed attrition for 1,480 employees (16.1% rate). Identified peak attrition in the 26-35 age group, Life Sciences education, and higher male churn. Delivered retention recommendations with statistical backing.</p>
+      <div class="project-footer">
+        <a href="https://github.com/Lisafoss22/HR_Analytics_Dashboard" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1" data-tags="powerbi">
+      <div class="project-header">
+        <div class="project-tags">
+          <span class="project-tag">Power BI</span>
+          <span class="project-tag">DAX</span>
+        </div>
+        <div class="project-title">Global Climate Change Indicators (2000–2023)</div>
+      </div>
+      <p class="project-desc">Comprehensive analysis of CO₂ emissions, extreme weather, sea level rise, forest coverage, and renewable energy across nations. Highlights urgent policy gaps and correlations between temperature rise and extreme weather frequency.</p>
+      <div class="project-footer">
+        <a href="https://github.com/Lisafoss22/Global-Climate-Change-Indicators-Analyzing-Trends-from-2000-to-2023" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2" data-tags="ml python">
+      <div class="project-header">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Machine Learning</span>
+          <span class="project-tag coral">ML</span>
+        </div>
+        <div class="project-title">Diabetes Prediction with Machine Learning</div>
+      </div>
+      <p class="project-desc">Used the Pima Indians Diabetes Database (UCI ML Repository) to build a classification model predicting diabetes risk from glucose, blood pressure, BMI, and other clinical features with feature engineering and validation techniques.</p>
+      <div class="project-footer">
+        <a href="https://github.com/Lisafoss22/Diabetes-Prediction-with-Machine-Learning" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-tags="python sql">
+      <div class="project-header">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">SQL</span>
+          <span class="project-tag">EDA</span>
+        </div>
+        <div class="project-title">Netflix Viewing Patterns Analysis</div>
+      </div>
+      <p class="project-desc">Comprehensive analysis of Netflix's content library: most prolific directors, content distribution by country, highest-rated titles, and genre frequency. Includes data cleaning, deduplication, and insight extraction via SQL and Python.</p>
+      <div class="project-footer">
+        <a href="https://github.com/Lisafoss22/Netflix-Viewing-Patterns-Analysis" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1" data-tags="sql">
+      <div class="project-header">
+        <div class="project-tags">
+          <span class="project-tag">Excel</span>
+          <span class="project-tag">Pivot Tables</span>
+          <span class="project-tag">SQL</span>
+        </div>
+        <div class="project-title">Pizza Sales Dashboard 2015</div>
+      </div>
+      <p class="project-desc">Interactive KPI dashboard analyzing revenue, order volume, and product mix from 2015 sales data. Time-trend charts and category filters helped identify top-performing pizza types, sizes, and marketing-ready insights for operators.</p>
+      <div class="project-footer">
+        <a href="https://github.com/Lisafoss22/Pizza-Sales-Dashboard-2015" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2" data-tags="ml python">
+      <div class="project-header">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag coral">ML</span>
+          <span class="project-tag">IoT</span>
+        </div>
+        <div class="project-title">Smart Dustbin – IoT Waste Management</div>
+      </div>
+      <p class="project-desc">Developed an IoT + ML (KNN) waste management system achieving <strong>96.875% accuracy</strong>. Smart dustbins alert maintenance personnel when full, supporting the Swachh Bharat Mission through data-driven sanitation management.</p>
+      <div class="project-footer">
+        <a href="https://github.com/Lisafoss22/smart-dustbin-garbage-management-system" target="_blank" class="project-link">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-header reveal">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Certifications & Achievements</h2>
+    <p class="section-subtitle">Continuous learning across BI, data engineering, machine learning, and cloud platforms.</p>
+  </div>
+
+  <!-- Publication highlight -->
+  <div class="pub-card reveal">
+    <div class="pub-label">📄 Published Research</div>
+    <h3>SMARTSETGO: A Learning Management System</h3>
+    <p>Co-authored a peer-reviewed paper on an AI-enabled Learning Management System featuring face recognition login, a real-time text editor, and a Q&A forum — designed to bridge traditional and modern learning in response to COVID-era educational challenges.</p>
+    <div class="pub-journal">International Journal of Innovative Science and Research Technology (IJISRT)</div>
+  </div>
+
+  <br>
+  <div class="certs-grid">
+    <div class="cert-card reveal">
+      <div class="cert-icon">🏅</div>
+      <div class="cert-info">
+        <h4>Prepare Data for Analysis with Power BI</h4>
+        <p>Microsoft</p>
+        <div class="cert-date">Mar 2025</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-icon">🏅</div>
+      <div class="cert-info">
+        <h4>Get Started with Microsoft Data Analytics</h4>
+        <p>Microsoft</p>
+        <div class="cert-date">Jul 2025</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-2">
+      <div class="cert-icon">📊</div>
+      <div class="cert-info">
+        <h4>Tableau 2024.1: Essential Training</h4>
+        <p>LinkedIn Learning</p>
+        <div class="cert-date">Jan 2025</div>
+      </div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-icon">🔷</div>
+      <div class="cert-info">
+        <h4>PwC Switzerland – Power BI Job Simulation</h4>
+        <p>Forage</p>
+        <div class="cert-date">Jul 2024</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-icon">🔷</div>
+      <div class="cert-info">
+        <h4>Accenture – Data Analytics & Visualization Simulation</h4>
+        <p>Forage</p>
+        <div class="cert-date">Jun 2024</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-2">
+      <div class="cert-icon">🔷</div>
+      <div class="cert-info">
+        <h4>Tata Group – Data Visualisation Job Simulation</h4>
+        <p>Forage</p>
+        <div class="cert-date">Jun 2024</div>
+      </div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-icon">📈</div>
+      <div class="cert-info">
+        <h4>Advanced Google Analytics</h4>
+        <p>Google Digital Academy (Skillshop)</p>
+        <div class="cert-date">Feb 2024 · Expires Feb 2027</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-icon">🤖</div>
+      <div class="cert-info">
+        <h4>30 Days Masterclass in Data Analytics</h4>
+        <p>Pantech.AI</p>
+        <div class="cert-date">Aug 2024</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-2">
+      <div class="cert-icon">🐍</div>
+      <div class="cert-info">
+        <h4>Python for Machine Learning</h4>
+        <p>Great Learning</p>
+        <div class="cert-date">Sep 2021</div>
+      </div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-icon">📊</div>
+      <div class="cert-info">
+        <h4>Data Visualization Using Python</h4>
+        <p>Great Learning</p>
+        <div class="cert-date">Oct 2022</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-1">
+      <div class="cert-icon">☁️</div>
+      <div class="cert-info">
+        <h4>Google Cloud Platform Fundamentals</h4>
+        <p>Coursera</p>
+        <div class="cert-date">Jan 2021</div>
+      </div>
+    </div>
+    <div class="cert-card reveal reveal-delay-2">
+      <div class="cert-icon">🔐</div>
+      <div class="cert-info">
+        <h4>Cybersecurity and Its Ten Domains</h4>
+        <p>Coursera</p>
+        <div class="cert-date">Apr 2020</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-header reveal">
+    <div class="section-label">Academic Background</div>
+    <h2 class="section-title">Education</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card featured reveal">
+      <div class="edu-degree">Master of Science</div>
+      <div class="edu-school">Clark University</div>
+      <div class="edu-period">Aug 2024 – May 2026 · GPA 3.88 / 4.0</div>
+      <div class="edu-detail">Data Analytics (STEM) — Advanced studies in statistical analysis, machine learning, data visualization, and data engineering.</div>
+      <div class="edu-courses">
+        <span class="edu-course">Python for Data Analytics</span>
+        <span class="edu-course">Mathematical Statistics</span>
+        <span class="edu-course">Data Visualization & Storytelling</span>
+        <span class="edu-course">Linear Regression</span>
+        <span class="edu-course">Data Engineering</span>
+        <span class="edu-course">Machine Learning</span>
+      </div>
+      <br>
+      <div class="edu-detail" style="margin-bottom:0">
+        <strong>Leadership:</strong> IEEE Chair (Spring 2026), IEEE Events & Logistics Officer, Student Career Forum Member (2 semesters), GSC Volunteer
+      </div>
+    </div>
+    <div class="edu-card reveal reveal-delay-2">
+      <div class="edu-degree">Bachelor of Engineering</div>
+      <div class="edu-school">St. Francis Institute of Technology</div>
+      <div class="edu-period">Aug 2018 – May 2022 · CGPA 7.81 / 10</div>
+      <div class="edu-detail">Information Technology — Software development, data structures, algorithms, database management, machine learning, AI, and cloud computing.</div>
+      <div class="edu-courses">
+        <span class="edu-course">Data Structures</span>
+        <span class="edu-course">Algorithms</span>
+        <span class="edu-course">Database Management</span>
+        <span class="edu-course">Machine Learning</span>
+        <span class="edu-course">AI</span>
+        <span class="edu-course">Cloud Computing</span>
+        <span class="edu-course">Cybersecurity</span>
+      </div>
+      <br>
+      <div class="edu-detail" style="margin-bottom:0">
+        <strong>Activities:</strong> Computer Society of India (CSI) — workshops, seminars, and networking events
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header reveal">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's Connect</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <h3>Open to Opportunities</h3>
+      <p>I'm actively seeking roles as a Data Analyst, BI Analyst, Business Analyst, or Research/Operations Analyst. If you're looking for someone who can translate complex data into clear decisions — let's talk.</p>
+      <div class="contact-links">
+        <a href="mailto:lisafoss.careers@gmail.com" class="contact-link-item">
+          <div class="contact-link-icon">✉️</div>
+          <div>
+            <div class="contact-link-text">Email</div>
+            <div class="contact-link-sub">lisafoss.careers@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+17744200002" class="contact-link-item">
+          <div class="contact-link-icon">📞</div>
+          <div>
+            <div class="contact-link-text">Phone</div>
+            <div class="contact-link-sub">(774) 420-0002</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/fosslisa/" target="_blank" class="contact-link-item">
+          <div class="contact-link-icon" style="font-weight:800;font-size:0.9rem">in</div>
+          <div>
+            <div class="contact-link-text">LinkedIn</div>
+            <div class="contact-link-sub">linkedin.com/in/fosslisa</div>
+          </div>
+        </a>
+        <a href="https://github.com/Lisafoss22" target="_blank" class="contact-link-item">
+          <div class="contact-link-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"></path></svg>
+          </div>
+          <div>
+            <div class="contact-link-text">GitHub</div>
+            <div class="contact-link-sub">github.com/Lisafoss22</div>
+          </div>
+        </a>
+        <div class="contact-link-item">
+          <div class="contact-link-icon">📍</div>
+          <div>
+            <div class="contact-link-text">Location</div>
+            <div class="contact-link-sub">Boston, MA (Open to Remote)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form reveal reveal-delay-2">
+      <div class="form-group">
+        <label class="form-label">Your Name</label>
+        <input type="text" class="form-input" id="cf-name" placeholder="Jane Smith" autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Company / Organization</label>
+        <input type="text" class="form-input" id="cf-company" placeholder="Acme Analytics Co.">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" id="cf-email" placeholder="jane@company.com" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-input" id="cf-message" placeholder="Hi Lisa, we have an exciting Data Analyst role at..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleFormSubmit()">Send Message →</button>
+      <div class="form-msg" id="formMsg">✅ Thanks! Lisa will get back to you soon.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed & built for <span>Lisa Roman Foss</span> · Data Analyst & BI Specialist · Boston, MA · <span>2026</span></p>
+</footer>
+
+<script>
+// ── THEME TOGGLE ──
+function toggleTheme(){
+  const html=document.documentElement;
+  const isDark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',isDark?'light':'dark');
+  document.querySelector('.theme-toggle').textContent=isDark?'🌙':'☀️';
+}
+
+// ── MOBILE MENU ──
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ── TYPED HEADLINE ──
+const phrases=['Power BI Dashboard Developer','SQL & Python Analyst','Data Storyteller','BI & Pricing Analyst','Machine Learning Practitioner'];
+let phraseIndex=0,charIndex=0,deleting=false;
+function type(){
+  const el=document.getElementById('typed-text');
+  const phrase=phrases[phraseIndex];
+  if(!deleting){
+    el.textContent=phrase.slice(0,++charIndex);
+    if(charIndex===phrase.length){deleting=true;setTimeout(type,1800);return;}
+  } else {
+    el.textContent=phrase.slice(0,--charIndex);
+    if(charIndex===0){deleting=false;phraseIndex=(phraseIndex+1)%phrases.length;}
+  }
+  setTimeout(type,deleting?50:75);
+}
+setTimeout(type,1200);
+
+// ── PARTICLE CANVAS ──
+(function(){
+  const canvas=document.getElementById('particle-canvas');
+  const ctx=canvas.getContext('2d');
+  let W,H,particles=[];
+
+  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+
+  const COUNT=60;
+  for(let i=0;i<COUNT;i++){
+    particles.push({
+      x:Math.random()*W, y:Math.random()*H,
+      vx:(Math.random()-0.5)*0.4, vy:(Math.random()-0.5)*0.4,
+      r:Math.random()*2+0.5,
+      opacity:Math.random()*0.5+0.1
+    });
+  }
+
+  const isDark=()=>document.documentElement.getAttribute('data-theme')==='dark';
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    const teal=isDark()?'0,201,184':'0,122,112';
+    for(let i=0;i<particles.length;i++){
+      const p=particles[i];
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;
+      if(p.y<0||p.y>H)p.vy*=-1;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(${teal},${p.opacity})`;
+      ctx.fill();
+      for(let j=i+1;j<particles.length;j++){
+        const q=particles[j];
+        const dx=p.x-q.x, dy=p.y-q.y;
+        const dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<120){
+          ctx.beginPath();
+          ctx.moveTo(p.x,p.y); ctx.lineTo(q.x,q.y);
+          ctx.strokeStyle=`rgba(${teal},${(1-dist/120)*0.15})`;
+          ctx.lineWidth=0.5;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ── SCROLL REVEAL ──
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// ── TIMELINE EXPAND ──
+function toggleTimeline(card){
+  const bullets=card.querySelector('.timeline-bullets');
+  const toggle=card.querySelector('.expand-toggle');
+  if(!bullets)return;
+  const isOpen=bullets.classList.toggle('open');
+  toggle.classList.toggle('open',isOpen);
+  toggle.innerHTML=isOpen?'Hide details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>':'Show details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>';
+}
+
+// ── PROJECT FILTER ──
+function filterProjects(tag,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card=>{
+    if(tag==='all'||card.dataset.tags.includes(tag)){
+      card.style.display='flex';
+    } else {
+      card.style.display='none';
+    }
+  });
+}
+
+// ── CONTACT FORM ──
+function handleFormSubmit(){
+  const name=document.getElementById('cf-name').value.trim();
+  const email=document.getElementById('cf-email').value.trim();
+  const msg=document.getElementById('cf-message').value.trim();
+  if(!name||!email||!msg){alert('Please fill in your name, email, and message.');return;}
+  const mailto=`mailto:lisafoss.careers@gmail.com?subject=Portfolio Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg+'\n\nFrom: '+name+'\nEmail: '+email)}`;
+  window.location.href=mailto;
+  document.getElementById('formMsg').style.display='block';
+}
+
+// ── ACTIVE NAV LINK ──
+window.addEventListener('scroll',()=>{
+  const sections=document.querySelectorAll('section[id],div[id="skills"]');
+  const scrollY=window.scrollY+100;
+  sections.forEach(sec=>{
+    if(scrollY>=sec.offsetTop&&scrollY<sec.offsetTop+sec.offsetHeight){
+      document.querySelectorAll('.nav-links a').forEach(a=>{
+        a.style.color=a.getAttribute('href')==='#'+sec.id?'var(--teal)':'';
+      });
+    }
+  });
+},{passive:true});
+</script>
+</body>
+</html>
